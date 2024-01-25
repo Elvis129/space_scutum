@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_task_space_scutum_2/note/constants/constants.dart';
 import 'package:test_task_space_scutum_2/note/note_bloc/note_bloc.dart';
 import 'package:test_task_space_scutum_2/note/pages/note_list.dart';
 import 'package:test_task_space_scutum_2/note/widgets/add_floating_action_button.dart';
@@ -25,7 +26,10 @@ class MyNoteApp extends StatelessWidget {
             ),
             backgroundColor: ConstantsColorWeather.colorBodyWeather,
             body: const Center(
-              child: Text('Додайте ваші нотатки.'),
+              child: Text(
+                'Додайте ваші нотатки',
+                style: TextStyle(color: ConstantsColors.colorNote),
+              ),
             ));
       } else if (state is NoteAddedState) {
         return DefaultTabController(
